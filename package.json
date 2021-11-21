@@ -1,7 +1,6 @@
 {
   "name": "Encourage-Bot-JS",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "@replit/database": "^2.0.0",
@@ -10,11 +9,23 @@
     "discord.js": "^12.5.1",
     "express": "^4.17.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "node": "^16.13.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tom225-tech/Cupid-Bot-JS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tom225-tech/Cupid-Bot-JS/issues"
+  },
+  "homepage": "https://github.com/Tom225-tech/Cupid-Bot-JS#readme",
+  "description": ""
 }

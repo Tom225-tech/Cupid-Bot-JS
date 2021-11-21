@@ -8,6 +8,7 @@ const confess = ["Go on. Today is the Best Day to Confess.", "Today is not Lucky
 
 const suggest = ["confess"]
 
+
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity('Cupid', {type: 'PLAYING'}).catch(console.error)
@@ -32,20 +33,54 @@ client.on('message', msg => {
     msg.reply(status)
  }
 
- const filter = x => {
-   return (x.author.id === msg.author.id);
- };
-
  if (suggest.some(word => msg.content.includes(word))) {
    const confession = confess[Math.floor(Math.random() * confess.length)]
    msg.channel.send(confession)
  }
-
+ 
 });
 
-async (client, message, args ) => {
-  const filter = x => 
-}
+client.on('message', message => {
+     if (message.content.startsWith('!hug')) { 
+    let targetMember = message.mentions.members.first();
+    if(!targetMember) return message.reply('you need to tag a user in order to hug them!!');
+        // message goes below!
+         message.channel.send(`<@${targetMember.user.id}> you just got a hug `);
+    }
+}); 
+
+client.on('message', message => {
+     if (message.content.startsWith('?annoy')) { 
+    let targetMember = message.mentions.members.first();
+    if(!targetMember) return message.reply('Pls tag a user!! ');
+    if (targetMember.user.id== `706723155800096789`) return message.reply('Go Die Loser');
+        // annoying start
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`)
+         message.channel.send(`<@${targetMember.user.id}>`) 
+    }
+}); 
 
 keepAlive()
 client.login(process.env.TOKEN)
